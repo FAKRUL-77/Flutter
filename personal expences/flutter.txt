@@ -1,0 +1,22 @@
+elevation: Use for drop shadow. use in card.
+** a card takes child width unless there is a parent that sets a clearly defined width
+** to decorate or modify date and time we neet to get help from a third-party app named intl
+** TextField er moddhe onPressed er alternative hisebe controller use kora jay, 
+	final titleController = TextEditingController();
+	final amountController = TextEditingController();
+		TextField(
+			decoration: InputDecoration(labelText: 'Title')
+			controller: titleController
+		)
+		TextField(
+			decoration: InputDecoration(labelText: 'Amount')
+			controller: amountController
+		)
+
+** SingleChildScrollView use to remove yello black shadow and scrolable screen
+   Instead of singleChildScrollView we can use ListView, A list view is a widget that has infinate height.
+   For few number of elements we use ListView but for huge number of elements we use ListView.builder().
+
+	child: SingleChildScrollView( .... ),
+	
+	Container( child: ListView( .... ), ),
