@@ -1,5 +1,4 @@
 import 'package:first_demo_r_ui/widgets/navigationBar/navbar_logo.dart';
-import 'package:first_demo_r_ui/widgets/navigationDrawer/navigation_drawer.dart';
 import 'package:flutter/material.dart';
 
 class NavigationBarMobile extends StatelessWidget {
