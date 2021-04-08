@@ -20,7 +20,7 @@ Animation:
 
 There are two types of animation.
     
-1. Explicit Animations
+    1. Explicit Animations
         - Give us more control(Using animation controller), But more complex to create.
         - If the animation repeats over and over without stoping or requires granular control we would use an explicit animation with   an animation controller.
 
