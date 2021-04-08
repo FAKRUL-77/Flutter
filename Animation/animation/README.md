@@ -29,3 +29,7 @@ There are two types of animation.
 TweenAnimationBuilder:
 
 - TweenAnimationBuilder is a way to create custom implicit animations and they allow us to define our own tweens with custom start and end points.
+
+Hero animation:
+
+- Hero animation gives us a way to animate widgets from one screen to the next as long as those widgets are present on both.
