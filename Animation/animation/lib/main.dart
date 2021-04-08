@@ -1,5 +1,5 @@
 import 'package:animation/view/home.dart';
-import 'package:animation/view/sandbox.dart';
+// import 'package:animation/view/sandbox.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -16,7 +16,7 @@ class MyApp extends StatelessWidget {
       theme: ThemeData(
         primarySwatch: Colors.blue,
       ),
-      home: SandBox(),
+      home: Home(),
     );
   }
 }
