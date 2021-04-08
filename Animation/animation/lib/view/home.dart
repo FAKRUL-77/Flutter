@@ -22,7 +22,7 @@ class _HomeState extends State<Home> {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: <Widget>[
-            SizedBox(height: 30),
+            SizedBox(height: 50),
             SizedBox(
               height: 160,
               child: ScreenTitle(
