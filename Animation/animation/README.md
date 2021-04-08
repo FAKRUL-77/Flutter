@@ -47,3 +47,5 @@ Animation Controller:
     - Status Listener: _controller.addStatusListener provide us the informatin about the controller status is complete or dismissed.
     - When we exit the animated page we need to dispose the animation controller.
 
+    - Tween Sequence: We could have a sequence of three or four tweens lined up next to each other and then when we run the animation it's going to go from one tween to the next to the next.
+

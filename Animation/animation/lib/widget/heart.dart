@@ -7,7 +7,8 @@ class Heart extends StatefulWidget {
 
 class _HeartState extends State<Heart> with SingleTickerProviderStateMixin {
   late AnimationController _controller;
-  late Animation _colorAnimation;
+  late Animation<Color?> _colorAnimation;
+  late Animation<double> _sizeAnimation;
   bool isFavorite = false;
 
   @override
@@ -21,18 +22,35 @@ class _HeartState extends State<Heart> with SingleTickerProviderStateMixin {
     _colorAnimation = ColorTween(begin: Colors.grey[400], end: Colors.red)
         .animate(_controller);
 
+    _sizeAnimation = TweenSequence(<TweenSequenceItem<double>>[
+      TweenSequenceItem<double>(
+        tween: Tween<double>(
+          begin: 30,
+          end: 50,
+        ),
+        weight: 50,
+      ),
+      TweenSequenceItem<double>(
+        tween: Tween<double>(
+          begin: 50,
+          end: 30,
+        ),
+        weight: 50,
+      ),
+    ]).animate(_controller);
+
     _controller.addListener(() {
       print(_controller.value);
       print(_colorAnimation.value);
     });
 
     _controller.addStatusListener((status) {
-      if(status == AnimationStatus.completed){
+      if (status == AnimationStatus.completed) {
         setState(() {
           isFavorite = true;
         });
       }
-      if(status == AnimationStatus.dismissed){
+      if (status == AnimationStatus.dismissed) {
         setState(() {
           isFavorite = false;
         });
@@ -41,7 +59,7 @@ class _HeartState extends State<Heart> with SingleTickerProviderStateMixin {
   }
 
   @override
-  void dispose(){
+  void dispose() {
     _controller.dispose();
     super.dispose();
   }
@@ -55,10 +73,10 @@ class _HeartState extends State<Heart> with SingleTickerProviderStateMixin {
           icon: Icon(
             Icons.favorite,
             color: _colorAnimation.value,
-            size: 30,
+            size: _sizeAnimation.value,
           ),
           onPressed: () {
-            isFavorite?_controller.reverse():_controller.forward();
+            isFavorite ? _controller.reverse() : _controller.forward();
           },
         );
       },
