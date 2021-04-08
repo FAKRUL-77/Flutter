@@ -38,7 +38,7 @@ Hero animation:
 Animation Controller:
 
 - Animation controller give us more granular of fine control over our animations and they are better suited to more complex animations or any kind of animation the flutter does not provide an out of the box solution for.
-    1. - Ticker: A ticker is a bit like a clock that ticks for our animation over and over so that for every tick we get a new animation value from point A to point B. 
+    - Ticker: A ticker is a bit like a clock that ticks for our animation over and over so that for every tick we get a new animation value from point A to point B. 
     - The vsync property allows us to sync this controller that we have with a ticker. The ticker we sync it with will be our stateful widget itself. So only when the widget tree is active on a screen will be animation tick.
     - Allow our widget to act as a ticker we need to use a mixin.
     - late: late has another great application for your Flutter code: you can remove many of your initState/constructor calls! This is because late runs “lazily”, which means it is not run at all until it is referenced the first time.
