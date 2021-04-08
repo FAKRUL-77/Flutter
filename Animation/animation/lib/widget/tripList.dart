@@ -64,14 +64,17 @@ class _TripListState extends State<TripList> {
                   color: Colors.blue[300])),
         ],
       ),
-      leading: Container(
-        height: 50,
-        width: 80,
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(5),
-          image: DecorationImage(
-            image: AssetImage('images/${trip.img}'),
-            fit: BoxFit.cover,
+      leading: Hero(
+        tag: 'location-img-${trip.img}',
+        child: Container(
+          height: 50,
+          width: 80,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(5),
+            image: DecorationImage(
+              image: AssetImage('images/${trip.img}'),
+              fit: BoxFit.cover,
+            ),
           ),
         ),
       ),

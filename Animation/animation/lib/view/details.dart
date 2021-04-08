@@ -2,7 +2,6 @@ import 'package:animation/models/trip.dart';
 import 'package:animation/widget/heart.dart';
 import 'package:flutter/material.dart';
 
-
 class Details extends StatelessWidget {
   final Trip trip;
   Details({required this.trip});
@@ -20,11 +19,14 @@ class Details extends StatelessWidget {
             crossAxisAlignment: CrossAxisAlignment.stretch,
             children: <Widget>[
               ClipRRect(
-                  child: Image.asset(
-                'images/${trip.img}',
-                height: 360,
-                fit: BoxFit.cover,
-                alignment: Alignment.topCenter,
+                  child: Hero(
+                tag: 'location-img-${trip.img}',
+                child: Image.asset(
+                  'images/${trip.img}',
+                  height: 360,
+                  fit: BoxFit.cover,
+                  alignment: Alignment.topCenter,
+                ),
               )),
               SizedBox(height: 30),
               ListTile(
