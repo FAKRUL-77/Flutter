@@ -43,5 +43,7 @@ Animation Controller:
     - Allow our widget to act as a ticker we need to use a mixin.
     - late: late has another great application for your Flutter code: you can remove many of your initState/constructor calls! This is because late runs “lazily”, which means it is not run at all until it is referenced the first time.
     - _controller.forword() start the animation controller for us.
-    - Listener: Automatically the animatin controller is split out values from zero to one. That means the default tween essentially is zero to one. We can listen whatever the value it splits out when it does split out a new value by adding a listener to the controller. 
+    - Listener: Automatically the animatin controller is split out values from zero to one. That means the default tween essentially is zero to one. We can listen whatever the value it splits out when it does split out a new value by adding a listener to the controller.
+    - Status Listener: _controller.addStatusListener provide us the informatin about the controller status is complete or dismissed.
+    - When we exit the animated page we need to dispose the animation controller.
 
