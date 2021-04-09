@@ -18,7 +18,6 @@ class _TripListState extends State<TripList> {
     WidgetsBinding.instance?.addPostFrameCallback((_) {
       _addTrips();
     });
-
   }
 
   void _addTrips() {
@@ -49,9 +48,14 @@ class _TripListState extends State<TripList> {
       ),
     ];
 
+    Future future = Future(() {});
     _trips.forEach((Trip trip) {
-      _tripTiles.add(_buildTile(trip));
-      _listKey.currentState?.insertItem(_tripTiles.length - 1);
+      future = future.then((_) {
+        return Future.delayed(const Duration(milliseconds: 80), () {
+          _tripTiles.add(_buildTile(trip));
+          _listKey.currentState?.insertItem(_tripTiles.length - 1);
+        });
+      });
     });
   }
 
