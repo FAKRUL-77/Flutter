@@ -49,3 +49,5 @@ Animation Controller:
 
     - Tween Sequence: We could have a sequence of three or four tweens lined up next to each other and then when we run the animation it's going to go from one tween to the next to the next.
 
+    - [Curves class](https://api.flutter.dev/flutter/animation/Curves-class.html)
+    - We can add a curve animation property to any built-in animation widget like animated opacity,  animated position, animated container, tween animation builder ect.

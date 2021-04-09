@@ -9,6 +9,7 @@ class ScreenTitle extends StatelessWidget {
   Widget build(BuildContext context) {
     return TweenAnimationBuilder(
       tween: Tween<double>(begin: 0, end: 1),
+      curve: Curves.bounceIn,
       child: Text(
         text,
         style: TextStyle(
